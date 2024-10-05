@@ -1,6 +1,5 @@
 import { CardPokemon } from "@/components";
 import { PokemonResponse, SimplePokemon } from "@/interfaces";
-import Image from "next/image";
 
 const getPokemons = async( limit = 250, offset= 0 ):Promise<SimplePokemon[]> => {
     const data:PokemonResponse = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${ offset }`)

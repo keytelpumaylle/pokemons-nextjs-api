@@ -1,4 +1,4 @@
-import FooterComponent from "@/components/ui/Footer";
+
 import NavbarComponent from "@/components/ui/Navbar";
 
 export const GridTemplate= ({children}:{children:React.ReactNode}) =>{

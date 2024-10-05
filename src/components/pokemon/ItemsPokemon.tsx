@@ -16,7 +16,7 @@ export const ItemsPokemon =({pokemon}:Props)=> {
         </div>
         <div className="flex flex-col items-center pb-10 w-[200px]">
             <Image
-                key={pokemon.id}
+                key={id}
                 src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemon.id}.svg`}
                 width={100}
                 height={100}
