@@ -1,5 +1,5 @@
 
-import HomePage from "./(pokemon)/page";
+import HomePage from "./pokemon/page";
 
 export default function Home() {
   return (
