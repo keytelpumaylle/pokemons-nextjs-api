@@ -1,3 +1,4 @@
+import { CardPokemon } from "@/components";
 import { PokemonResponse, SimplePokemon } from "@/interfaces";
 import Image from "next/image";
 
@@ -19,20 +20,13 @@ export default async function HomePage() {
     const pokemons = await getPokemons()
 
     return (
-      <div className="flex flex-col">
-        <div className="flex flex-wrap gap-10 items-center justify-center">
-            {
-                pokemons.map(pokemon =>(
-                    <Image
-                        key={pokemon.id}
-                        src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemon.id}.svg`}
-                        width={100}
-                        height={100}
-                        alt={pokemon.name}
-                    />
-                ))
-            }
-        </div>
+      <>
+      <div className="flex gap-4 items-center align-bottom">
+        <h1 className="font-extrabold text-[40px]">Total Pokemons</h1><small className="text-[25px]">( 205 )</small>
       </div>
+      <div className="flex flex-col">
+        <CardPokemon pokemons={pokemons}/>
+      </div>
+      </>
     );
   }
